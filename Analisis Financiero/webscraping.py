@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 
 # URL de la página de Investing.com que deseas scrapear
-url = 'https://www.investing.com/equities/apple-computer-inc'
+url = 'https://es.investing.com/equities/nvidia-corp-cash-flow'
 
 # Realizar la solicitud HTTP
 response = requests.get(url)
