@@ -120,7 +120,7 @@ class GeneradorCuotas():
 
 
 
-Prestamos2k = GeneradorCuotas(25000,14,60)
+Prestamos2k = GeneradorCuotas(14985000,8.6,60)
 Prestamos2k.Seguros_Comisiones(0,0)
 Prestamos2k.BaseDatos
 Prestamos2k.Para_Excel("Prestamo_Ejemplo")
