@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 import scipy as sp
+from Informacion import Informacion
 
 def Stocastic_Hesston(dt, paths = 30, Ventana = 8, T = 1.0):
     lastYear = np.log(dt['close'].iloc[-252:])
@@ -51,3 +52,8 @@ def Stocastic_Hesston(dt, paths = 30, Ventana = 8, T = 1.0):
 
     plt.grid(axis = "y", linestyle = "--")
     plt.show()
+
+def EMA(Simbolo, Temporalidad, Periodos, tot = 5000):
+    dt = Informacion(Simbolo,tot,Temporalidad)
+    ema = dt['close'].ewm(span = Periodos, adjust= False).mean()
+    return ema

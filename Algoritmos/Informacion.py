@@ -52,6 +52,8 @@ def Informacion(Symbol, Partidas, Tiempo):
     for T in range(len(rates)):
         Tiempo.append(dt.fromtimestamp(rates['time'].iloc[T]))
     rates['time'] = Tiempo
+    rates = rates[~rates['time'].dt.dayofweek.isin([5, 6])]
+    rates.set_index('time', inplace=True)
     return rates
 
 #--------------------------------------------------------------
@@ -120,10 +122,6 @@ class GeneradorCuotas():
 
 
 
-Prestamos2k = GeneradorCuotas(14985000,8.6,60)
-Prestamos2k.Seguros_Comisiones(0,0)
-Prestamos2k.BaseDatos
-Prestamos2k.Para_Excel("Prestamo_Ejemplo")
 
 
 
