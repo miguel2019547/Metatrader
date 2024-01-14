@@ -31,7 +31,7 @@ def Stocastic_Hesston(dt, paths = 30, Ventana = 8, T = 1.0):
     plt.ylabel("Precio")
     plt.grid()
     plt.subplot(2,1,2)
-    plt.hist(df.iloc[-1],bins = 40, edgecolor='black')
+    plt.hist(df.iloc[-1],bins = 8, edgecolor='black')
 
     minimo = 0
     maximo = 0
